@@ -9,19 +9,22 @@ function Login() {
     let name;
     let value;
     const handleInput = (e) => {
-        console.log(e)
-        
+        // console.log(e)        
         name  = e.target.name;
         value = e.target.value;
         setUser({...user , [name]:value})
 
     }
-    
+    const handleSubmit = () => { 
+        // e.preventDefault()
+        console.log(user)
+        
+    }  
 
     return (
         <>
             <div className="container my-5">
-                <form>
+                
                     <div className="mb-3">
                         <input type="text" name='name' className="form-control" placeholder='Enter Your Name' value={user.name} onChange={ handleInput} />
                     </div>
@@ -34,8 +37,8 @@ function Login() {
                         <input type="password" name='Passward' className="form-control" placeholder='Enter Your Passward' value={user.Passward} onChange={ handleInput} />
                     </div>
 
-                    <button type="submit" className="btn btn-primary">Submit</button>
-                </form>
+                    <button className="btn btn-primary" onClick={handleSubmit}>Submit</button>
+             
             </div>
             <p>{user.name}</p>
             <p>{user.email}</p>
