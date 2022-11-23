@@ -40,9 +40,9 @@ function Login() {
                 <button className="btn btn-primary" onClick={handleSubmit}>Submit</button>
 
             </div>
-            <p>{user.name}</p>
+            {/* <p>{user.name}</p>
             <p>{user.email}</p>
-            <p>{user.Passward}</p>
+            <p>{user.Passward}</p> */}
 
         </>
     )
